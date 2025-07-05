@@ -42,7 +42,7 @@ This system aims to support small to medium-scale farmers by making precision ag
 
 
 ## 📊 Results
-Content: This screenshot shows real-time sensor data from an Arduino serial monitor.
-Data Includes: Likely temperature, humidity, soil moisture, or similar environmental parameters, typically used in precision farming or IoT projects.
+#Content: This screenshot shows real-time sensor data from an Arduino serial monitor.
+#Data Includes: Likely temperature, humidity, soil moisture, or similar environmental parameters, typically used in precision farming or IoT projects.
 ![Result 1](Results_images/Arduino_serial_monitor_data.png)
 
