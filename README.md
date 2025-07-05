@@ -45,5 +45,5 @@ This system aims to support small to medium-scale farmers by making precision ag
 
 Below are some generated images that demonstrate the effectiveness of our model:
 ### 🔹 Result 1
-![Result 1](results/result1.png)
+![Result 1](Results_images/Arduino_serial_monitor_data.png)
 
