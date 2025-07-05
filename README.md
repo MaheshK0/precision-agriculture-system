@@ -43,7 +43,7 @@ This system aims to support small to medium-scale farmers by making precision ag
 
 ## 📊 Results
 1. 🔌 Real-time Data Monitoring using Arduino
-Sensor data (temperature, humidity, soil NPK Values) is displayed in real-time on the Arduino IDE's Serial Monitor for debugging and monitoring.
+> 📟 Sensor data (temperature, humidity, soil NPK Values) is displayed in real-time on the Arduino IDE's Serial Monitor for debugging and monitoring.
 ![Result 1](Results_images/Arduino_serial_monitor_data.png)
 
 3. 📲 Real-Time Cloud Data Logging via Firebase
