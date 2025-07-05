@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Device 2</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1 style="text-align: center; margin-top: 20px;">AgriSense Node for Location 2</h1>
+    <div class="hero">
+        <div class="overlay">
+            
+            <div class="quote-container">
+                <div class="quote-box">
+                    <h2>Temperature</h2>
+                    <p class="value" id="temperature">Loading...</p>
+                </div>
+                <div class="quote-box">
+                    <h2>Humidity</h2>
+                    <p class="value" id="humidity">Loading...</p>
+                </div>
+                <div class="quote-box">
+                    <h2>Soil Moisture</h2>
+                    <p class="value" id="soil-moisture">Loading...</p>
+                </div>
+                <div class="quote-box">
+                    <h2>Nitrogen</h2>
+                    <p class="value" id="nitrogen">Loading...</p>
+                </div>
+                <div class="quote-box">
+                    <h2>Phosphorus</h2>
+                    <p class="value" id="phosphorus">Loading...</p>
+                </div>
+                <div class="quote-box">
+                    <h2>Potassium</h2>
+                    <p class="value" id="potassium">Loading...</p>
+                </div>
+            </div>
+            <a href="index.html" class="back-button">Back</a>
+        </div>
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
+    <script>
+        const firebaseConfig = {
+            apiKey: "AIzaSyDf6eCa9-QFwxoddLxk8KEILOz-xJb9M5U",
+            authDomain: "smart-farm-147f7.firebaseapp.com",
+            databaseURL: "https://smart-farm-147f7-default-rtdb.asia-southeast1.firebasedatabase.app",
+            projectId: "smart-farm-147f7",
+            storageBucket: "smart-farm-147f7.appspot.com",
+            messagingSenderId: "734395747168",
+            appId: "1:734395747168:web:e2425e0facd7d20b8b6c05",
+            measurementId: "G-PHKHEG23B0"
+        };
+
+        firebase.initializeApp(firebaseConfig);
+
+        var dataRef = firebase.database().ref();
+
+        dataRef.on('value', function(snapshot) {
+            var data = snapshot.val();
+            document.getElementById('temperature').innerHTML = data.DHT_11.Temperature + " &#8451;";
+            document.getElementById('humidity').innerHTML = data.DHT_11.Humidity + "%";
+            document.getElementById('soil-moisture').innerHTML = data['Soil Moisture'] + "%";
+            document.getElementById('nitrogen').innerHTML = data.Nitrogen + " mg/kg";
+            document.getElementById('phosphorus').innerHTML = data.Phosphorus + " mg/kg";
+            document.getElementById('potassium').innerHTML = data.Potassium + " mg/kg";
+        });
+
+        document.getElementById('back-button').addEventListener('click', function() {
+            window.location.href = 'index.html';
+        });
+    </script>
+</body>
+</html>
