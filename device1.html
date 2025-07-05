@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Device 1</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1 style="text-align: center; margin-top: 20px;">FieldSense Device for Location 1</h1>
+    <div class="hero">
+        <div class="overlay">
+            
+            <div class="quote-container">
+                <div class="quote-box">
+                    <h2>Temperature</h2>
+                    <p class="value" id="temperature">Loading...</p>
+                </div>
+                <div class="quote-box">
+                    <h2>Humidity</h2>
+                    <p class="value" id="humidity">Loading...</p>
+                </div>
+                <div class="quote-box">
+                    <h2>Soil Moisture</h2>
+                    <p class="value" id="soil-moisture">Loading...</p>
+                </div>
+                <div class="quote-box">
+                    <h2>Nitrogen</h2>
+                    <p class="value" id="nitrogen">Loading...</p>
+                </div>
+                <div class="quote-box">
+                    <h2>Phosphorus</h2>
+                    <p class="value" id="phosphorus">Loading...</p>
+                </div>
+                <div class="quote-box">
+                    <h2>Potassium</h2>
+                    <p class="value" id="potassium">Loading...</p>
+                </div>
+            </div>
+            <a href="index.html" class="back-button">Back</a>
+        </div>
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
+    <script>
+        const firebaseConfig = {
+  apiKey: "AIzaSyDZufUpH7w1qorcuP5PFB0niMV9oMW4H9o",
+  authDomain: "precision-farming-3dfe8.firebaseapp.com",
+  databaseURL: "https://precision-farming-3dfe8-default-rtdb.asia-southeast1.firebasedatabase.app",
+  projectId: "precision-farming-3dfe8",
+  storageBucket: "precision-farming-3dfe8.appspot.com",
+  messagingSenderId: "206304291834",
+  appId: "1:206304291834:web:7e055fa3eea3ce49e89243",
+  measurementId: "G-58M6DZ446L"
+};
+
+firebase.initializeApp(firebaseConfig);
+
+var dataRef = firebase.database().ref();
+
+dataRef.on('value', function(snapshot) {
+    var data = snapshot.val();
+    document.getElementById('temperature').innerHTML = data.DHT_11.Temperature + " &#8451;";
+    document.getElementById('humidity').innerHTML = data.DHT_11.Humidity + "%";
+    document.getElementById('soil-moisture').innerHTML = data['Soil Moisture'] + "%"; // Update to "Soil Moisture/Bottom Layer"
+    document.getElementById('nitrogen').innerHTML = data.Nitrogen + " mg/kg";
+    document.getElementById('phosphorus').innerHTML = data.Phosphorus + " mg/kg";
+    document.getElementById('potassium').innerHTML = data.Potassium + " mg/kg";
+});
+
+document.getElementById('back-button').addEventListener('click', function() {
+    window.location.href = 'index.html';
+});
+    </script>
+</body>
+</html>
