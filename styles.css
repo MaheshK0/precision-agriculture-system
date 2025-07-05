@@ -1,0 +1,115 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+.hero {
+    background: url('Designer.png') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+h1 {
+    color: #333;
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 30px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.button-container {
+    display: flex;
+    gap: 20px;
+}
+
+.button {
+    display: inline-block;
+    padding: 25px 45px;
+    background-color: #00BFA5;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-size: 35px;
+    border-radius: 10px;
+    transition: background-color 0.3s;
+}
+
+.button:hover {
+    background-color: #00796B;
+}
+
+.back-button {
+    display: inline-block;
+    margin-top: 22px;
+    padding: 10px 22px;
+    background-color: #FF6F00;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.back-button:hover {
+    background-color: #E65100;
+}
+
+.quote-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.quote-box {
+    background-color: rgb(214, 248, 159);
+    padding: 23px; /* Medium padding */
+    border-radius: 10px; /* More rounded corners */
+    width: 175px; /* Medium width */
+    height: 135px; /* Medium height */
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* More pronounced shadow */
+}
+
+.quote-box h2 {
+    margin: 0;
+    font-size: 27px;
+    color: #040404;
+}
+
+.quote-box p {
+    margin: 10px 0 0;
+    font-size: 34px;
+    color: hsl(0, 0%, 2%);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .button-container {
+        flex-direction: column;
+    }
+
+    .button {
+        margin-bottom: 10px;
+        width: 100%;
+        text-align: center;
+    }
+
+    .quote-container {
+        flex-direction: column;
+    }
+
+    .quote-box {
+        width: 100%;
+    }
+}
