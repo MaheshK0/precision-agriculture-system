@@ -52,7 +52,11 @@ This system aims to support small to medium-scale farmers by making precision ag
 
 ![Result 1](Results_images/Real_time_Firebase_data.png)
 
-3. 🌐 Web Interface for Real-Time Monitoring
+
+3. 🌐 The main web interface (index page) provides farmers with options to view real-time data from multiple IoT devices (e.g., Device 1, Device 2) installed across different field locations.
+![Result 1](Results_images/Main_web_page.png)
+  
+4. 🌐 Web Interface for Real-Time Monitoring
 > 📟 A custom-built web interface displays real-time sensor data from the IoT device with live values, a responsive design, and easy monitoring for farmers.
 
   ![Result 1](Results_images/Web_interface_Real_time_data_device_1.png)
@@ -62,7 +66,7 @@ This system aims to support small to medium-scale farmers by making precision ag
 
 ![Result 1](Results_images/crop_recomandation_model.png)
 
-7. 🌿 Crop Recommendation Web Interface
+6. 🌿 Crop Recommendation Web Interface
 > 📟 A user-friendly web interface lets users input field parameters and instantly receive ML-based crop recommendations to simplify agronomic decision-making.
 
 ![Result 1](Results_images/web_crop_recomandation.png)
