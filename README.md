@@ -44,8 +44,6 @@ This system aims to support small to medium-scale farmers by making precision ag
 ## 📊 Results
 
 Below are some generated images that demonstrate the effectiveness of our model:
-
-| Sample | Description |
-|--------|-------------|
-| ![Result 1](./7fd50438-a2a9-4a00-8bbf-264cbef49829.png)
+### 🔹 Result 1
+![Result 1](results/result1.png)
 
