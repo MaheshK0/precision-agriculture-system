@@ -40,3 +40,12 @@ Promote sustainable farming practices using affordable technology
 📈 Impact:
 This system aims to support small to medium-scale farmers by making precision agriculture accessible, affordable, and easy to use — helping them increase productivity while reducing environmental impact.
 
+
+## 📊 Results
+
+Below are some generated images that demonstrate the effectiveness of our model:
+
+| Sample | Description |
+|--------|-------------|
+| ![Result 1](./7fd50438-a2a9-4a00-8bbf-264cbef49829.png)
+
