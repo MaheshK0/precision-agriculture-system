@@ -43,18 +43,19 @@ This system aims to support small to medium-scale farmers by making precision ag
 
 ## 📊 Results
 1. 🔌 Real-time Data Monitoring using Arduino
+Sensor data (temperature, humidity, soil NPK Values) is displayed in real-time on the Arduino IDE's Serial Monitor for debugging and monitoring.
 ![Result 1](Results_images/Arduino_serial_monitor_data.png)
 
-2. 📲 Real-Time Cloud Data Logging via Firebase
+3. 📲 Real-Time Cloud Data Logging via Firebase
 ![Result 1](Results_images/Real_time_Firebase_data.png)
 
-3. 🌐 Web Interface for Real-Time Monitoring
+4. 🌐 Web Interface for Real-Time Monitoring
    ![Result 1](Results_images/Web_interface_Real_time_data_device_1.png)
 
-4. 🤖 ML-Based Crop Recommendation Model
+5. 🤖 ML-Based Crop Recommendation Model
 ![Result 1](Results_images/crop_recomandation_model.png)
 
-5. 🌿 Crop Recommendation Web Interface
+6. 🌿 Crop Recommendation Web Interface
    ![Result 1](Results_images/web_crop_recomandation.png)
 
 
